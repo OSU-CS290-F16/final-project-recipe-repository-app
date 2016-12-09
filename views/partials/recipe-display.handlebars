@@ -1,0 +1,50 @@
+<div id="recipe-display-backdrop"></div>
+<div id="recipe-display-modal">
+  <div id="modal-dialog">
+
+    <div id="modal-header">
+      <h1>{{content.recipeMain.0.recipe_name}}</h1>
+    </div>
+
+    <img src="/images/go-back.png" id="go-back">
+
+    <div id="modal-content">
+
+      <div class="recipe-component">
+        <h3 id="recipe-component-header">Ingredients:</h3>
+        <ul class="recipe-list">
+          {{#each content.ingredients}}
+          <li class="recipe-list-item ingredient">{{this.ingredient_value}}, <span class="quantity">{{this.units_value}}</span></li>
+          {{/each}}
+        </ul>
+        <h3 id="recipe-component-header">Equipment:</h3>
+        <ul class="recipe-list">
+          {{#each content.equipment}}
+          <li class="recipe-list-item ingredient">{{this.equipment_piece}}</li>
+          {{/each}}
+        </ul>
+        <h3 id="recipe-component-header">Temperature and Time:</h3>
+        <ul class="recipe-list">
+          <li class="recipe-list-item ingredient">Preperation: {{content.recipeMain.0.prep_time}}</li>
+          <li class="recipe-list-item ingredient">Cook: {{content.recipeMain.0.cook_time}}</li>
+          <li class="recipe-list-item ingredient">Temperature: {{content.recipeMain.0.temp}}</li>
+        </ul>
+        <h3 id="recipe-component-header">Serves 4-6</h3>
+      </div>
+
+    </div>
+
+    <div id="modal-content">
+      <div class="recipe-component-steps">
+        <h3 id="recipe-component-header">Steps:</h3>
+        <ol class="recipe-list">
+          {{#each content.steps}}
+          <li class="recipe-list-item step">{{this.step_value}}</li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+
+  </div>
+</div>

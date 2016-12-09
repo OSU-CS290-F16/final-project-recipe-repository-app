@@ -1,0 +1,43 @@
+{{> header}}
+
+<main>
+
+  <div class="recipe-workspace">
+
+    
+  {{!-- {{> home-page}} --}}
+  
+  {{!-- {{> contact-page}} --}}
+
+
+			<h1 class="recipe-header">List of Recipes:</h1>
+			{{#if recipeContent}}<button id="show-recipe">Click here</button>{{/if}}
+
+			{{#each recipeHeader}}
+				{{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
+			{{/each}}
+
+      {{#each search_results}}
+        {{> recipe-icon-title categoryName = this.recipe_category id = this.recipe_id}}
+      {{/each}}
+
+	</div>
+
+
+  <div class="right-frame"></div>
+
+  <div id="search-box">
+        <input id="search-box-input" type="text" name="query" placeholder="Enter search query...">
+  </div>
+
+	{{> google-search}}
+
+</main>
+
+{{> footer}}
+
+<button type="button" class="google-search">Google Search?</button>
+
+{{> recipe-display content = recipeContent}}
+
+{{> create-recipe}}
