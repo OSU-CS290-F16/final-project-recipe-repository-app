@@ -14,3 +14,6 @@ In doing this, we will ensure that content is approved by other team members bef
 - whitlocn
 - mckencod
 - morrilan
+
+# Note: Project moved to classroom repo to ensure grading. Development done on a GitHub repo at the link below:#
+[Development Repository with Commit Log](https://github.com/natewhit44/Recipe-Repository-App)
